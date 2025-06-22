@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <link rel="icon" href="{{ url_for('static', filename='images/website_icon-removebg-preview.png') }}" type="x-icon">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AlphaLingo</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Funnel+Display&family=Funnel+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/style.css" />
+    
+</head>
+<body>
+    <a href="website.html">
+    <img src="{{ url_for('static', filename='images/website_icon-removebg-preview.png') }}" class="topleftimg" alt="Site Icon" />
+    </a>
+    <h1>AlphaLingo</h1>
+    <div class="container">
+        <div class="wrapper">
+            <div class="menu-container">
+                <ul class="menu">
+                    <li tabindex="0">
+                        <select name = "options" id = "options" placeholde = "languages">
+                            <option class="language-option" value = 'e'>Standard English</option>
+                            <option class="language-option" value = 'x'>Generation X</option>
+                            <option class="language-option" value = 'm'>Millennials</option>
+                            <option class="language-option" value = 'z'>Generation Z</option>
+                            <option class="language-option" value = 'a'>Generation A</option>
+                        </select>
+                    </li>
+                </ul>
+            </div>
+            <div class="input">
+                <div class="textarea-group with-mic">
+                    <textarea name = "input" id = "input" placeholder="Input Text" autofocus autocomplete="off"></textarea>
+
+                </div>
+
+                <div class="textarea-group with-volume">
+                    <textarea name = "output" id = "output" placeholder="Translated Text" readonly></textarea>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="/static/script.js"></script>
+</html>

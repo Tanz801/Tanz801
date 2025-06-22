@@ -1,0 +1,183 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    height: 100%;
+    font-family: Arial, sans-serif;
+    background-color: #fcf5eb;
+}
+
+.container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    background-color: #fcf5eb;
+    padding: 0 20px 40px;
+}
+
+.wrapper {
+    position: relative;
+    width: 90%;
+    max-width: 1000px;
+    background-color: #efa593;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.menu-container {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    z-index: 10;
+    font-size: 12px;
+}
+
+.menu {
+    list-style: none;
+    background: #ffffff;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 0;
+    margin: 0;
+    min-width: 100px;
+}
+
+.menu > li {
+    position: relative;
+    border-radius: 8px;
+    cursor: pointer;
+    user-select: none;
+}
+
+.menu > li p {
+    margin: 0;
+    font-weight: 600;
+    font-size: 12px;
+}
+
+.menu > li:focus-within .submenu {
+    list-style-type: none;
+}
+
+.submenu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: #ffffff;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-top: 0px; 
+    padding: 4px 0;
+    z-index: 20;
+}
+
+.submenu li {
+    padding: 4px 12px;
+    font-size: 12px;
+    cursor: pointer;
+    white-space: nowrap;
+}
+
+.submenu li:hover {
+    background-color: #f0f0f0;
+}
+
+.input {
+    display: flex;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.textarea-group {
+    flex: 1;
+    position: relative;
+}
+
+textarea {
+    width: 100%;
+    height: 300px;
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    resize: none;
+    background-color: #fefefe;
+}
+
+/* Fixed padding-left to always 12px */
+.with-mic textarea,
+.with-volume textarea {
+    padding-left: 12px;
+    padding-bottom: 10px;
+}
+
+.with-mic textarea::placeholder,
+.with-volume textarea::placeholder {
+    text-indent: 0;
+}
+
+.with-mic .mic-wrapper,
+.with-volume .mic-wrapper {
+    position: absolute;
+    left: 5px;
+    bottom: 10px;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.with-mic .mic-wrapper:hover,
+.with-volume .mic-wrapper:hover {
+    background-color: #b8b8b86a;
+}
+
+.with-mic .microphone,
+.with-volume .microphone {
+    width: 24px;
+    height: 24px;
+    pointer-events: none;
+}
+
+h1 {
+    text-align: center;
+    font-size: 48px;
+    font-weight: bold;
+    margin-top: 40px;
+    margin-bottom: 50px;  
+    padding: 0;
+    color: #efa593;
+    background-color: #fcf5eb;  
+}
+
+.topleftimg {
+    width: 43px;
+    height: 43px;
+    padding: 8px;
+    margin: 12px;
+}
+
+.topleftimg:hover {
+    cursor: pointer;
+    background-color: #b8b8b86a;
+    opacity: 1;
+    border-radius: 20px;
+}
+
+select option {
+    font-family: "Funnel Display", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 12px;
+}
